@@ -1,9 +1,11 @@
 pipeline {
 
-/*libraries{
+libraries{
 lib 'shlib'
 lib 'shlib@sonar.groovy'
-}*/
+lib 'shlib@build.groovy'
+lib 'shlib@nexus.groovy'
+}
 
     agent any
     tools{
@@ -79,10 +81,10 @@ lib 'shlib@sonar.groovy'
        }
   
         }
-        /*post{
+        post{
 always{
 sendNotifications currentBuild.result
 }
-}*/
+}
 
     }
